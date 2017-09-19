@@ -2,23 +2,15 @@ package net.wdc.testinglist.model;
 
 
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
+import javax.persistence.*;
 import java.util.Comparator;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.OneToMany;
-import org.hibernate.annotations.*;
-
-import org.hibernate.annotations.Cascade;
-
 @Entity
-@Table(name="QUESTION")
+@Table(name="question")
 public class Question {
 
 	@Id

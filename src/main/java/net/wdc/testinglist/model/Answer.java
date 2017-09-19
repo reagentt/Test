@@ -14,22 +14,22 @@ import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 
 @Entity
-@Table(name="ANSWER")
+@Table(name="answer")
 public class Answer {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID")
+	@Column(name="id")
 	private Integer id;
 	
-	@Column(name="CONTENT")
+	@Column(name="content")
 	private String content;
 	
-	@Column(name="IS_RIGHT")
+	@Column(name="is_right")
 	private Integer isRight;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="QUESTION_ID")
+	@JoinColumn(name="question_id")
 	private Question question;
 
 	/**
